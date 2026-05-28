@@ -17,3 +17,10 @@ class ChatRequest(BaseModel):
 class GoalCreate(BaseModel):
     title: str
     target_amount: Optional[int] = None
+
+class UserProfileCreate(BaseModel):
+    income_type: Optional[str] = None
+    financial_goal: Optional[str] = None
+    risk_level: Optional[str] = None
+    country: Optional[str] = "UK"
+    financial_knowledge: Optional[str] = None

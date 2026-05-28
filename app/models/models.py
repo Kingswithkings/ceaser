@@ -48,3 +48,19 @@ class Goal(Base):
     current_amount = Column(Integer, default=0)
     user_id = Column(Integer, ForeignKey("users.id"))
     created_at = Column(DateTime, default=datetime.utcnow)
+
+
+
+class UserProfile(Base):
+    __tablename__ = "user_profiles"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), unique=True)
+
+    income_type = Column(String, nullable=True)
+    financial_goal = Column(String, nullable=True)
+    risk_level = Column(String, nullable=True)
+    country = Column(String, default="UK")
+    financial_knowledge = Column(String, nullable=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow)
