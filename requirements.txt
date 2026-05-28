@@ -1,5 +1,10 @@
 fastapi
 uvicorn
 openai
-python-dotenv
+python-dotenv==1.2.2
 pydantic
+email-validator
+sqlalchemy
+passlib[bcrypt]
+bcrypt<4.1
+python-jose[cryptography]
